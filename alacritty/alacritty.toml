@@ -1,0 +1,91 @@
+# Dark themes
+# import = ["~/.config/alacritty/themes/themes/solarized_osaka.toml"]
+# import = ["~/.config/alacritty/themes/themes/midnight-haze.toml"]
+# import = ["~/.config/alacritty/themes/themes/meliora.toml"]
+# import = ["~/.config/alacritty/themes/themes/marine_dark.toml"]
+# import = ["~/.config/alacritty/themes/themes/kanagawa_dragon.toml"]
+# import = ["~/.config/alacritty/themes/themes/gotham.toml"]
+
+import = ["~/.config/alacritty/themes/themes/iceberg_dark.toml"]
+
+
+# Light themes
+# import = ["~/.config/alacritty/themes/themes/github_light_colorblind.toml"]
+
+live_config_reload = true
+
+[bell]
+animation = "EaseOutExpo"
+color = "0xffffff"
+duration = 0
+
+[cursor]
+unfocused_hollow = true
+blink_interval = 650
+
+[cursor.style]
+blinking = "On"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 18.0
+
+[font.bold]
+family = "Fantasque Sans Mono"
+style = "Regular"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.normal]
+family = "Fantasque Sans Mono"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 40
+
+[[keyboard.bindings]]
+chars = '\p'
+key = "LBracket"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = '\n'
+key = "RBracket"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001E"
+key = "Key6"
+mods = "Control"
+
+[mouse]
+hide_when_typing = true
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[window]
+decorations = "transparent"
+dynamic_padding = true
+startup_mode = "Windowed"
+opacity = 0.85
+blur = true
+title = "First, solve the problem. Then, write the code."
+
+# [shell]
+# program = "/bin/zsh"
+# args = ["-i", "-l", "-c", "tmux attach || tmux new-session -A -s main"]
+
+[window.padding]
+x = 10
+y = 30
