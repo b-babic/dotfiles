@@ -1,0 +1,4 @@
+.swp
+**/plugged/*
+*.log
+.DS_Store

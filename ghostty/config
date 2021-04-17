@@ -1,0 +1,87 @@
+theme = light:Havn Daggry,dark:Tomorrow Night
+
+# dawnfox
+# dayfox
+# Dracula+
+# embers-dark
+# Everforest Dark - Hard
+# farmhouse-light
+# Github-Light-Colorblind
+# gruber-darker
+# Havn Daggry
+# Melange_dark
+# Melange_light
+# Mellifluous
+# Oceanic-Next
+# Red Planet
+# RetroLegends
+# seoulbones_light
+# vesper
+# Solarized Dark - Patched
+# Square
+# Tomorrow
+# Tomorrow Night
+
+
+# font-family = "Fantasque Sans Mono"
+window-title-font-family = SF Pro Display
+font-size = 18
+font-thicken = false
+font-family = Terminus (TTF)
+font-style = Regular
+font-style-bold = Bold
+font-style-italic = Oblique
+font-style-bold-italic = Bold Oblique
+adjust-cell-height = 20%
+adjust-cursor-height = 4
+
+mouse-hide-while-typing = true
+cursor-style = block
+adjust-cursor-thickness = 400%
+cursor-style-blink = false
+mouse-scroll-multiplier = 2
+
+# don't ask when closing
+confirm-close-surface = false
+
+background-opacity = 0.94
+background-blur-radius = 15
+
+window-theme = system
+macos-titlebar-style = tabs
+window-padding-balance = true
+window-colorspace = display-p3
+macos-window-shadow = false
+
+# The opacity level (opposite of transparency) of an unfocused split.
+# Unfocused splits by default are slightly faded out to make it easier to see
+# which split is focused. To disable this feature, set this value to 1.
+unfocused-split-opacity = 0.8
+
+# don't show an overlay when resizing a window
+resize-overlay = never
+
+# always save the state of window when quitting
+window-save-state = always
+
+shell-integration = fish
+
+auto-update = check
+
+# Keybindings
+
+# This works only because I remmapped "Hide Ghostty" in macOS keyboards
+# settings to a different keybinding (F9)
+# https://github.com/alacritty/alacritty/issues/5346#issuecomment-1055695103
+keybind = super+h=goto_split:left
+keybind = super+l=goto_split:right
+keybind = super+k=goto_split:top
+keybind = super+j=goto_split:bottom
+
+keybind = super+shift+l=resize_split:right,30
+keybind = super+shift+j=resize_split:down,30
+keybind = super+shift+h=resize_split:left,30
+keybind = super+shift+k=resize_split:up,30
+
+# Open search until scrollback is finished
+keybind = super+f=write_screen_file:open
