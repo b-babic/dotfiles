@@ -1,0 +1,25 @@
+{
+    "installed_packages":
+    [
+        "A File Icon",
+        "Dockerfile Syntax Highlighting",
+        "Git",
+        "GitGutter",
+        "LSP",
+        "LSP-bash",
+        "LSP-css",
+        "LSP-html",
+        "LSP-json",
+        "LSP-pylsp",
+        "LSP-typescript",
+        "LSP-yaml",
+        "Markdown Extended",
+        "MarkdownPreview",
+        "Material Theme",
+        "Package Control",
+        "Pretty JSON",
+        "SideBarEnhancements",
+        "TOML",
+        "YAML Nav"
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "clients": {
+        "pylsp": {
+            "enabled": true,
+            "command": ["pylsp"],
+            "selector": "source.python"
+        },
+        "typescript-language-server": {
+            "enabled": true,
+            "command": ["typescript-language-server", "--stdio"],
+            "selector": "source.ts | source.tsx | source.js | source.jsx"
+        },
+        "gopls": {
+            "enabled": true,
+            "command": ["gopls"],
+            "selector": "source.go"
+        }
+    },
+    "auto_show_diagnostics_panel": false,
+    "show_diagnostics_phantoms": true,
+    "show_diagnostics_in_gutter": true,
+    "diagnostic_scroll_bar_marks": true,
+    "document_highlight_style": "stippled",
+    "document_highlight_delay": 0,
+    "highlight_active_signature_parameter": true,
+    "show_code_actions_bulb": true
+}

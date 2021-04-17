@@ -1,0 +1,14 @@
+font-family = "Fantasque Sans Mono"
+font-size = 20
+adjust-cell-height = 35%
+theme = "flexoki-light"
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 2
+background-opacity = 0.94
+background-blur-radius = 20
+window-padding-balance = true
+macos-titlebar-style = tabs
+window-colorspace = display-p3
+macos-window-shadow = false
+auto-update = check
+window-title-font-family = Geist Mono

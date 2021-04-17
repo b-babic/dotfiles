@@ -1,0 +1,92 @@
+# Base i3 configuration
+set $mod Mod4
+
+# Workspace names
+set $ws1 "1:terminal"
+set $ws2 "2:code"
+set $ws3 "3:browser"
+set $ws4 "4:files"
+set $ws5 "5:misc"
+
+# Font
+font pango:JetBrains Mono 10
+
+# Basic bindings
+floating_modifier $mod
+bindsym $mod+Return exec ghostty
+bindsym $mod+Shift+q kill
+bindsym $mod+d exec --no-startup-id "rofi -show drun"
+
+# Focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+# Move
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+# Layout
+bindsym $mod+h split h
+bindsym $mod+v split v
+bindsym $mod+f fullscreen toggle
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Floating
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+
+# Workspaces
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+
+# Move to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+
+# Gaps
+gaps inner 10
+gaps outer 5
+smart_gaps on
+
+# Window borders
+for_window [class="^.*"] border pixel 2
+new_window pixel 2
+
+# Autostart
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id picom -b
+exec_always --no-startup-id $HOME/.local/bin/change-wallpaper
+
+# Assignments
+assign [class="Ghostty"] $ws1
+assign [class="Sublime_text"] $ws2
+assign [class="Firefox|Chromium"] $ws3
+assign [class="Nautilus|Thunar"] $ws4
+
+# Volume controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.local/bin/volume-control up
+bindsym XF86AudioLowerVolume exec --no-startup-id ~/.local/bin/volume-control down
+bindsym XF86AudioMute exec --no-startup-id ~/.local/bin/volume-control mute
+
+# Brightness controls
+bindsym XF86MonBrightnessUp exec --no-startup-id ~/.local/bin/brightness-control up
+bindsym XF86MonBrightnessDown exec --no-startup-id ~/.local/bin/brightness-control down
+
+# Power menu
+bindsym $mod+Shift+e exec --no-startup-id ~/.local/bin/power-menu
+
+# Screenshot
+bindsym Print exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
+bindsym Shift+Print exec --no-startup-id maim -s ~/Pictures/Screenshots/$(date +%s).png
