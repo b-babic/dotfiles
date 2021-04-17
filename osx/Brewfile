@@ -1,0 +1,70 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+
+# Essentials
+brew "coreutils"
+brew "openssl@1.1"
+
+# Package manager
+brew "asdf"
+brew "gnupg" # required dep for nodejs plugin
+
+# Media / stream
+brew "ffmpeg"
+brew "streamlink"
+
+# Fuzzy CLI tools deps
+brew "fzf"
+brew "fd"
+brew "tree"
+brew "ripgrep"
+brew "bat"
+
+# Fonts
+cask "font-cascadia-code"
+cask "font-iosevka-nerd-font"
+
+# Shell
+brew "fish"
+brew "pnpm", link: false
+
+# Tools
+brew "git-delta"
+brew "hyperfine" # cli benchmark tool
+
+cask "wezterm"
+cask "iterm2"
+brew "neovim", args: ["HEAD"]
+
+# Browsers
+cask "orion"
+
+# Misc apps
+cask "bitwarden"
+
+cask "hidden-bar"
+cask "shottr"
+
+# Dev
+cask "visual-studio-code"
+cask "coteditor"
+cask "tableplus"
+cask "sourcetree"
+
+# cask "imageoptim" # No M1 support yet
+cask "the-unarchiver"
+cask "netnewswire"
+cask "raycast"
+cask "latest"
+
+cask "transmission"
+cask "appcleaner"
+
+# Malware
+cask "knockknock"
+
+# Optional (enable per need)
+# cask "zoom"
+# cask "calibre"
