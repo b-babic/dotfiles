@@ -1,0 +1,3 @@
+
+# Support local .nvmrc and .node-options
+legacy_version_file = yes
